@@ -32,6 +32,7 @@ form?.addEventListener("submit", e => {
 function addListItem(task: Task){
   const item = document.createElement("li")
   const label = document.createElement("label")
+  //checkbox section
   const checkbox = document.createElement("input")
   checkbox.addEventListener("change", () => {
     task.completed = checkbox.checked
@@ -39,9 +40,25 @@ function addListItem(task: Task){
   })
   checkbox.type = "checkbox"
   checkbox.checked = task.completed
-  label.append(checkbox, task.title)
+  // close button section
+  const closeButton = document.createElement("button")
+  closeButton.textContent = "X"
+  closeButton.addEventListener("click", () => {
+    removeListItem(task)
+    item.remove()
+  })
+  //
+  label.append(checkbox, task.title, closeButton)
   item.append(label)
   list?.append(item)
+}
+
+function removeListItem(task: Task){
+  console.log(tasks)
+  const taskIndex = tasks.indexOf(task)
+  tasks.splice(taskIndex,1)
+  saveTasks()
+  console.log(tasks)
 }
 
 function saveTasks(){
