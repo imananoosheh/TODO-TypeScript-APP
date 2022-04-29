@@ -1,3 +1,6 @@
+# TODO-TypeScript-APP
+    A TODO app developed using Node.js and TypeScript 
+
 # New Project
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
