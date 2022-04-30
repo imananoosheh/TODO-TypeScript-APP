@@ -5,4 +5,37 @@
 #list{
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#list > li{
+  margin-top: 1em;
+}
+
+input[type= text]#new-task-title{
+  border: none;
+  border-bottom: 2px solid black;
+  transition: 0.3s;
+  outline: none;
+}
+input[type= text]#new-task-title:focus{
+  border-bottom: 10px solid rgb(133, 133, 133);
+}
+
+#new-task-form > button {
+  background-color: transparent;
+  border: none;
+  border-left: 2px solid black;
+  border-radius: 2px;
+  transition: 0.3s linear;
+}
+#new-task-form > button:hover{ 
+  border-left: 10px solid black;
+}
+#new-task-form > button:active{ 
+  background-color: black;
+  color: white;
 }

@@ -54,11 +54,9 @@ function addListItem(task: Task){
 }
 
 function removeListItem(task: Task){
-  console.log(tasks)
   const taskIndex = tasks.indexOf(task)
   tasks.splice(taskIndex,1)
   saveTasks()
-  console.log(tasks)
 }
 
 function saveTasks(){
