@@ -1,3 +1,9 @@
+:root{
+  --hover-focus-color: rgb(133, 133, 133);
+  --com-color-1: #358597;
+  --com-color-2: #f4a896;
+}
+
 *,::after,::before{
   box-sizing: border-box;
 }
@@ -9,33 +15,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 0.5em;
 }
-
-#list > li{
-  margin-top: 1em;
+ul#list li:nth-child(2n){
+  background-color: #358597;
+  color: #f4a896;
 }
-
+ul#list li:nth-child(2n+1){
+  background-color: #f4a896;
+  color: #358597;
+}
 input[type= text]#new-task-title{
   border: none;
-  border-bottom: 2px solid black;
-  transition: 0.3s;
+  border-bottom: 2px solid var(--com-color-1);
+  transition: 0.1s;
   outline: none;
 }
-input[type= text]#new-task-title:focus{
-  border-bottom: 10px solid rgb(133, 133, 133);
+input[type= text]#new-task-title:focus,
+input[type= text]#new-task-title:hover{
+  border-bottom: 10px solid var(--com-color-2);
 }
 
-#new-task-form > button {
+#new-task-form button {
   background-color: transparent;
   border: none;
-  border-left: 2px solid black;
+  border-left: 2px solid var(--com-color-1);
   border-radius: 2px;
-  transition: 0.3s linear;
+  transition: 0.1s linear;
 }
-#new-task-form > button:hover{ 
-  border-left: 10px solid black;
+#new-task-form button:hover{ 
+  border-left: 10px solid var(--com-color-2);
 }
-#new-task-form > button:active{ 
-  background-color: black;
+#new-task-form button:active{ 
+  border-color: rgb(49, 156, 0);
+  background-color: rgb(49, 156, 0);
   color: white;
+}
+
+li label{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between; 
+  align-items: center;
+  width: 100vw;
+  padding: 0 5%;
+}
+label input{
+  /* margin-right: 4em;
+  margin-left: 4em; */
+
+  align-self: center;
+}
+label p{
+  text-align: center;
+  padding: 0 1rem;
+  word-wrap: anywhere;
+}
+input[type=checkbox]{
+  border: 1px solid var(--com-color-1);
+  
 }

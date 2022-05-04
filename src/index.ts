@@ -48,7 +48,9 @@ function addListItem(task: Task){
     item.remove()
   })
   //
-  label.append(checkbox, task.title, closeButton)
+  const labelText = document.createElement("p")
+  labelText.append(task.title)
+  label.append(checkbox, labelText, closeButton)
   item.append(label)
   list?.append(item)
 }
