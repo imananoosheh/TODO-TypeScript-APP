@@ -60,18 +60,24 @@ li label{
   width: 100vw;
   padding: 0 5%;
 }
-label input{
-  /* margin-right: 4em;
-  margin-left: 4em; */
 
-  align-self: center;
-}
 label p{
   text-align: center;
   padding: 0 1rem;
   word-wrap: anywhere;
+  max-width: 75%;
 }
-input[type=checkbox]{
-  border: 1px solid var(--com-color-1);
-  
+label button{
+  outline: 2px solid white;
+  border-radius: 0px;
+  background-color: white;
+  cursor: pointer;
+  border-width: 0px;
+  height: 2em;
+  width: 2em;
+}
+input[type="checkbox"]{
+  width: 2em;
+  height: 2em;
+  outline: 2px solid white;
 }
