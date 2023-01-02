@@ -1,10 +1,14 @@
 {
+  "homepage": "https://imananosheh.github.io/todo-app-ts",
   "scripts": {
     "start": "snowpack dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "snowpack build"
   },
   "dependencies": {
     "canvas-confetti": "^1.2.0",
+    "gh-pages": "^4.0.0",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
