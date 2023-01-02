@@ -1,5 +1,5 @@
 {
-  "homepage": "https://imananosheh.github.io/todo-app-ts",
+  "homepage": "https://imananosheh.github.io/TODO-TypeScript-APP",
   "scripts": {
     "start": "snowpack dev",
     "predeploy": "npm run build",
